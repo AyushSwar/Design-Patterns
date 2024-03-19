@@ -1,4 +1,6 @@
-package com.example.strategies;
+package com.example.strategies.paymentTypes;
+
+import com.example.strategies.PayStrategy;
 
 import java.io.BufferedReader;
 import java.io.IOException;

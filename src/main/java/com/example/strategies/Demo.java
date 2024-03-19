@@ -18,9 +18,9 @@ public class Demo {
 
     static {
         priceOnProducts.put(1, 2222);
-        priceOnProducts.put(3, 3333);
-        priceOnProducts.put(5, 5555);
-        priceOnProducts.put(7, 77777);
+        priceOnProducts.put(2, 3333);
+        priceOnProducts.put(3, 5555);
+        priceOnProducts.put(4, 77777);
     }
 
     public static void main(String[] args) throws IOException {
@@ -42,6 +42,7 @@ public class Demo {
                 System.out.print("Do you wish to continue selecting products? Y/N: ");
                 continueChoice = reader.readLine();
             } while (continueChoice.equalsIgnoreCase("Y"));
+
             if (strategy == null) {
                 System.out.println("Please, select a payment method:" + "\n" +
                         "1 - PalPay" + "\n" +
@@ -52,6 +53,7 @@ public class Demo {
                 } else {
                     strategy = new PayByCreditCard();
                 }
+
                 order.processOrder(strategy);
                 System.out.print("Pay " + order.getTotalCost() + " units or Continue shopping? P/C: ");
                 String proceed = reader.readLine();
